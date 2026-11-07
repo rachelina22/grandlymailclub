@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>GRANDLY · La revista que da gusto recibir</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Jost:wght@400;500;600;700&amp;family=Figtree:ital,wght@0,400..900;1,400..900&amp;display=swap">
+<style>
+body{margin:0}
+*{box-sizing:border-box}
+a{color:inherit}
+p,ul,ol,h1,h2,h3{margin:0}
+ul{padding:0;list-style:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px;width:100%}
+.eyebrow{font-family:'Jost',sans-serif;font-weight:600;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:#1D3FAE;margin:0 0 16px}
+.serif{font-family:'Instrument Serif',Georgia,serif;font-weight:400}
+.h-xl{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:88px;line-height:.98;color:#0F1F5C}
+.h-l{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:58px;line-height:1.04;color:#0F1F5C}
+.h-m{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:34px;line-height:1.1;color:#0F1F5C}
+.lead{font-size:21px;line-height:1.55;color:#2B3358}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;font-family:'Jost',sans-serif;font-weight:600;font-size:16px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:999px;border:2px solid transparent;cursor:pointer;text-align:center}
+.btn-p{background:#1D3FAE;color:#FBF8F1;border-color:#1D3FAE}
+.btn-p:hover{background:#0F1F5C;border-color:#0F1F5C}
+.btn-s{background:transparent;color:#0F1F5C;border-color:#0F1F5C}
+.btn-s:hover{background:#0F1F5C;color:#FBF8F1}
+.btn-y{background:#F7C531;color:#0F1F5C;border-color:#F7C531}
+.btn-y:hover{background:#FBD458;border-color:#FBD458}
+a:focus-visible,button:focus-visible{outline:3px solid #E5392B;outline-offset:3px}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:56px;align-items:center}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:28px}
+.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px}
+.sec{padding:112px 0}
+.nav{display:flex;gap:34px;font-family:'Jost',sans-serif;font-weight:500;font-size:15px;letter-spacing:.12em;text-transform:uppercase}
+.nav a{text-decoration:none;color:#0F1F5C;padding:12px 0}
+.nav a:hover{color:#1D3FAE;text-decoration:underline}
+.card{background:#FFFDF7;border:1px solid #0F1F5C;padding:28px}
+.chk{display:flex;gap:12px;align-items:flex-start;font-size:18px;line-height:1.45;color:#2B3358}
+.faq-b{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:72px;padding:18px 0;background:transparent;border:0;text-align:left;cursor:pointer;font-family:'Instrument Serif',Georgia,serif;font-size:28px;line-height:1.2;color:#0F1F5C}
+@media (max-width:960px){.nav{display:none}.sec{padding:80px 0}}
+@media (max-width:700px){.h-xl{font-size:54px}.h-l{font-size:40px}.h-m{font-size:30px}.lead{font-size:19px}.wrap{padding:0 20px}.faq-b{font-size:23px}}
+</style>
+</helmet>
+<div id="inicio" style="background:#FBF8F1;color:#1E2747;font-family:'Figtree',system-ui,sans-serif;font-size:18px;line-height:1.6">
+
+  <div style="background:#0F1F5C;color:#FBF8F1;text-align:center;padding:12px 20px;font-family:'Jost',sans-serif;font-weight:500;font-size:14px;letter-spacing:.14em;text-transform:uppercase">
+    Regala GRANDLY por 3, 6 o 12 meses · <a href="#regalar" style="color:#F7C531">Ver cómo funciona</a>
+  </div>
+  <div style="height:8px;background:repeating-linear-gradient(-45deg,#E5392B 0 14px,#FBF8F1 14px 28px,#1D3FAE 28px 42px,#FBF8F1 42px 56px)"></div>
+
+  <header style="background:#FBF8F1;border-bottom:1px solid #CFD6E8">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:88px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px">
+      <a href="#inicio" style="display:flex;align-items:center;gap:14px;text-decoration:none" aria-label="GRANDLY, inicio">
+        <svg width="48" height="36" viewBox="0 0 48 36" aria-hidden="true"><path d="M0 36V14a7 7 0 0 1 14 0V36Z" fill="#1D3FAE"></path><path d="M17 36V14a7 7 0 0 1 14 0V36Z" fill="#E5392B"></path><path d="M34 36V14a7 7 0 0 1 14 0V36Z" fill="#F7C531"></path></svg>
+        <span style="font-family:'Jost',sans-serif;font-weight:700;font-size:26px;letter-spacing:.3em;color:#0F1F5C">GRANDLY</span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#revista">La revista</a>
+        <a href="#generaciones">Entre generaciones</a>
+        <a href="#suscripciones">Suscripciones</a>
+        <a href="#regalar">Regalar</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <a class="btn btn-p" href="#suscripciones">Suscribirme</a>
+    </div>
+  </header>
+
+  <section style="padding:88px 0 96px;overflow:hidden">
+    <div class="wrap g2">
+      <div>
+        <p class="eyebrow">El club por correo para todas las generaciones</p>
+        <h1 class="h-xl">La revista que da gusto recibir cada mes.</h1>
+        <p class="lead" style="margin-top:28px;max-width:560px">GRANDLY es una revista mensual, en papel y en digital, con historias, ideas y actividades para disfrutar en casa y compartir en familia.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:36px">
+          <a class="btn btn-p" href="#suscripciones">Quiero suscribirme</a>
+          <a class="btn btn-s" href="#regalar">Regalar a un abuelo</a>
+        </div>
+        <p style="margin-top:28px;font-size:17px;color:#4A5272">Disponible en España · En español · Sin aplicaciones que instalar</p>
+      </div>
+      <div aria-hidden="true" style="position:relative;width:100%;max-width:540px;height:540px;margin:0 auto;overflow:hidden">
+        <div style="position:absolute;right:0;bottom:24px;width:310px;transform:rotate(5deg);background:repeating-linear-gradient(-45deg,#E5392B 0 12px,#FBF8F1 12px 24px,#1D3FAE 24px 36px,#FBF8F1 36px 48px);padding:10px;box-shadow:0 18px 40px rgba(15,31,92,.18)">
+          <div style="background:#FFFDF7;height:200px;position:relative">
+            <svg width="100%" height="100%" viewBox="0 0 290 200" preserveAspectRatio="none"><path d="M0 0L145 112L290 0" fill="none" stroke="#0F1F5C" stroke-width="2"></path></svg>
+          </div>
+        </div>
+        <div style="position:absolute;left:14px;top:6px;width:290px;height:390px;transform:rotate(-4deg);background:#F8F1E2;border:1px solid #0F1F5C;box-shadow:0 22px 44px rgba(15,31,92,.22);display:flex;flex-direction:column">
+          <div style="height:8px;background:repeating-linear-gradient(-45deg,#E5392B 0 10px,#F8F1E2 10px 20px,#1D3FAE 20px 30px,#F8F1E2 30px 40px)"></div>
+          <div style="padding:22px 24px;display:flex;flex-direction:column;flex:1">
+            <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:22px;letter-spacing:.3em;color:#0F1F5C">GRANDLY</div>
+            <div class="serif" style="font-size:44px;line-height:1;color:#0F1F5C;margin-top:20px">Las generaciones nos unen.</div>
+            <svg width="150" height="112" viewBox="0 0 150 112" style="margin-top:auto"><path d="M0 112V45a22 22 0 0 1 44 0V112Z" fill="#1D3FAE"></path><path d="M53 112V25a22 22 0 0 1 44 0V112Z" fill="#E5392B"></path><path d="M106 112V55a22 22 0 0 1 44 0V112Z" fill="#F7C531"></path></svg>
+            <div style="font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#4A5272;margin-top:12px">Revista mensual · Papel y digital</div>
+          </div>
+        </div>
+        <div style="position:absolute;right:26px;top:20px;width:104px;transform:rotate(6deg);background:#FFFDF7;padding:9px;border:4px dotted #FBF8F1;outline:1px solid #CFD6E8;box-shadow:0 8px 18px rgba(15,31,92,.2)">
+          <div style="background:#BBD3F5;padding:10px 8px 0;display:flex;flex-direction:column;align-items:center;gap:6px">
+            <svg width="64" height="48" viewBox="0 0 48 36"><path d="M0 36V14a7 7 0 0 1 14 0V36Z" fill="#1D3FAE"></path><path d="M17 36V14a7 7 0 0 1 14 0V36Z" fill="#E5392B"></path><path d="M34 36V14a7 7 0 0 1 14 0V36Z" fill="#F7C531"></path></svg>
+            <div style="font-family:'Jost',sans-serif;font-weight:700;font-size:8px;letter-spacing:.18em;color:#0F1F5C;padding-bottom:6px">GRANDLY · ESPAÑA</div>
+          </div>
+        </div>
+        <svg width="120" height="120" viewBox="0 0 100 100" style="position:absolute;right:120px;top:96px;transform:rotate(-12deg);opacity:.85"><circle cx="50" cy="50" r="46" fill="none" stroke="#0F1F5C" stroke-width="2"></circle><circle cx="50" cy="50" r="24" fill="none" stroke="#0F1F5C" stroke-width="1.5"></circle><path id="pmk" d="M50 50m-36 0a36 36 0 1 1 72 0a36 36 0 1 1-72 0" fill="none"></path><text font-family="Jost, sans-serif" font-weight="600" font-size="8.4" letter-spacing="2" fill="#0F1F5C"><textPath href="#pmk">GRANDLY · CLUB · ESPAÑA · CORREO ·</textPath></text></svg>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#0F1F5C;color:#FBF8F1;padding:72px 0">
+    <div class="wrap g3" style="gap:40px">
+      <div>
+        <div class="serif" style="font-size:30px;line-height:1.15;color:#F7C531">Una revista que apetece recibir</div>
+        <p style="margin-top:12px;font-size:18px;color:#DCE3F5">Cada mes, historias, ideas y pasatiempos pensados para disfrutarse sin prisa, en papel o en pantalla.</p>
+      </div>
+      <div>
+        <div class="serif" style="font-size:30px;line-height:1.15;color:#F7C531">Una experiencia digital fácil</div>
+        <p style="margin-top:12px;font-size:18px;color:#DCE3F5">Texto grande, botones amplios y pocas opciones por pantalla.</p>
+      </div>
+      <div>
+        <div class="serif" style="font-size:30px;line-height:1.15;color:#F7C531">Un club que conecta generaciones</div>
+        <p style="margin-top:12px;font-size:18px;color:#DCE3F5">Propuestas para hacer juntos abuelos, hijos y nietos, aunque vivan lejos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="revista" class="sec" style="background:#F8F1E2">
+    <div class="wrap">
+      <div style="max-width:720px">
+        <p class="eyebrow">La revista</p>
+        <h2 class="h-l">Ocho secciones para abrir cada mes con ilusión.</h2>
+        <p class="lead" style="margin-top:20px">Una revista variada, cercana y fácil de leer. Y todo lo que contiene también tiene su versión digital.</p>
+      </div>
+      <div class="g4" style="margin-top:56px">
+        <sc-for list="{{sections}}" as="s" hint-placeholder-count="8">
+          <article class="card">
+            <div style="font-family:'Jost',sans-serif;font-weight:600;font-size:14px;letter-spacing:.2em;color:#1D3FAE">{{s.n}}</div>
+            <h3 class="h-m" style="margin-top:10px;font-size:30px">{{s.title}}</h3>
+            <p style="margin-top:10px;font-size:18px;color:#2B3358">{{s.text}}</p>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="generaciones" class="sec" style="background:#1D3FAE;color:#FBF8F1;position:relative;overflow:hidden">
+    <div class="wrap g2">
+      <div>
+        <p class="eyebrow" style="color:#F7C531">Entre generaciones</p>
+        <h2 class="h-l" style="color:#FBF8F1">Dos generaciones, una misma mesa.</h2>
+        <p class="lead" style="margin-top:20px;color:#E4EAFA;max-width:560px">En cada número encontrarás propuestas para compartir tiempo con los tuyos. Nadie enseña ni aprende solo: aquí se aprende en los dos sentidos.</p>
+        <ul style="margin-top:32px;display:flex;flex-direction:column">
+          <sc-for list="{{ideas}}" as="i" hint-placeholder-count="5">
+            <li style="display:grid;grid-template-columns:44px 1fr;gap:12px;padding:16px 0;border-top:1px solid rgba(251,248,241,.35)">
+              <span class="serif" style="font-size:30px;line-height:1;color:#F7C531">{{i.n}}</span>
+              <span style="font-size:19px;line-height:1.4"><strong style="font-weight:700">{{i.title}}.</strong> {{i.text}}</span>
+            </li>
+          </sc-for>
+        </ul>
+      </div>
+      <div aria-hidden="true" style="display:flex;justify-content:center">
+        <svg viewBox="0 0 320 380" style="width:100%;max-width:420px"><path d="M0 380V150a52 52 0 0 1 104 0V380Z" fill="#F7C531"></path><path d="M108 380V82a52 52 0 0 1 104 0V380Z" fill="#F4B9C2"></path><path d="M216 380V190a52 52 0 0 1 104 0V380Z" fill="#BBD3F5"></path><circle cx="160" cy="82" r="14" fill="#1D3FAE"></circle></svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="background:#FBF8F1">
+    <div class="wrap">
+      <div style="max-width:720px">
+        <p class="eyebrow">Cómo funciona</p>
+        <h2 class="h-l">Tres pasos y el correo hace el resto.</h2>
+      </div>
+      <div class="g3" style="margin-top:56px;gap:40px">
+        <div style="border-top:3px solid #0F1F5C;padding-top:20px">
+          <div class="serif" style="font-size:64px;line-height:1;color:#1D3FAE">1</div>
+          <h3 class="h-m" style="margin-top:12px">Elige tu modalidad</h3>
+          <p style="margin-top:10px;color:#2B3358">Digital, físico o completo. Tú decides cómo quieres recibir GRANDLY.</p>
+        </div>
+        <div style="border-top:3px solid #0F1F5C;padding-top:20px">
+          <div class="serif" style="font-size:64px;line-height:1;color:#1D3FAE">2</div>
+          <h3 class="h-m" style="margin-top:12px">Recíbela cada mes</h3>
+          <p style="margin-top:10px;color:#2B3358">La revista llega a tu buzón o a tu pantalla, con su experiencia digital esperándote.</p>
+        </div>
+        <div style="border-top:3px solid #0F1F5C;padding-top:20px">
+          <div class="serif" style="font-size:64px;line-height:1;color:#1D3FAE">3</div>
+          <h3 class="h-m" style="margin-top:12px">Disfruta y comparte</h3>
+          <p style="margin-top:10px;color:#2B3358">Lee, participa y haz las propuestas con tu familia. Es mejor en compañía.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="suscripciones" class="sec" style="background:#F8F1E2">
+    <div class="wrap">
+      <div style="max-width:720px">
+        <p class="eyebrow">Suscripciones</p>
+        <h2 class="h-l">Tres formas de formar parte del club.</h2>
+        <p class="lead" style="margin-top:20px">Elige la que mejor te encaje. Los precios se anunciarán antes del lanzamiento.</p>
+      </div>
+      <div class="g3" style="margin-top:56px;align-items:stretch">
+        <div class="card" style="display:flex;flex-direction:column;padding:36px 32px">
+          <div class="k" style="font-family:'Jost',sans-serif;font-weight:600;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:#1D3FAE">Solo en pantalla</div>
+          <h3 class="h-m" style="margin-top:8px;font-size:44px">Digital</h3>
+          <p style="margin-top:8px;color:#4A5272">Precio por definir</p>
+          <ul style="margin-top:24px;display:flex;flex-direction:column;gap:14px;flex:1">
+            <li class="chk"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;margin-top:4px"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="#1D3FAE" stroke-width="2.6"></path></svg>La revista en versión digital</li>
+            <li class="chk"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;margin-top:4px"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="#1D3FAE" stroke-width="2.6"></path></svg>La experiencia digital del club</li>
+          </ul>
+          <a class="btn btn-s" href="#final" style="margin-top:32px">Quiero Digital</a>
+        </div>
+        <div class="card" style="display:flex;flex-direction:column;padding:36px 32px">
+          <div style="font-family:'Jost',sans-serif;font-weight:600;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:#1D3FAE">En papel, en tu buzón</div>
+          <h3 class="h-m" style="margin-top:8px;font-size:44px">Físico</h3>
+          <p style="margin-top:8px;color:#4A5272">Precio por definir</p>
+          <ul style="margin-top:24px;display:flex;flex-direction:column;gap:14px;flex:1">
+            <li class="chk"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;margin-top:4px"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="#1D3FAE" stroke-width="2.6"></path></svg>La revista impresa cada mes</li>
+            <li class="chk"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;margin-top:4px"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="#1D3FAE" stroke-width="2.6"></path></svg>Acceso al contenido digital</li>
+          </ul>
+          <a class="btn btn-s" href="#final" style="margin-top:32px">Quiero Físico</a>
+        </div>
+        <div style="display:flex;flex-direction:column;padding:36px 32px;background:#0F1F5C;color:#FBF8F1;border:1px solid #0F1F5C;position:relative">
+          <div style="position:absolute;top:-16px;left:32px;background:#F7C531;color:#0F1F5C;font-family:'Jost',sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;padding:7px 14px">La más completa</div>
+          <div style="font-family:'Jost',sans-serif;font-weight:600;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:#F7C531">Todo el club</div>
+          <h3 class="serif" style="margin-top:8px;font-size:44px;line-height:1.1;color:#FBF8F1">Completo</h3>
+          <p style="margin-top:8px;color:#C9D3F0">Precio por definir</p>
+          <ul style="margin-top:24px;display:flex;flex-direction:column;gap:14px;flex:1">
+            <li class="chk" style="color:#FBF8F1"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;margin-top:4px"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="#F7C531" stroke-width="2.6"></path></svg>La revista impresa y digital</li>
+            <li class="chk" style="color:#FBF8F1"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;margin-top:4px"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="#F7C531" stroke-width="2.6"></path></svg>La experiencia digital del club</li>
+            <li class="chk" style="color:#FBF8F1"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;margin-top:4px"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="#F7C531" stroke-width="2.6"></path></svg>Todas las actividades del club</li>
+          </ul>
+          <a class="btn btn-y" href="#final" style="margin-top:32px">Quiero Completo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="regalar" class="sec" style="background:#F4B9C2">
+    <div class="wrap g2">
+      <div>
+        <p class="eyebrow" style="color:#0F1F5C">Para regalar</p>
+        <h2 class="h-l">Un regalo que llega cada mes.</h2>
+        <p class="lead" style="margin-top:20px;color:#1E2747;max-width:540px">Regala GRANDLY a quien más quieres durante 3, 6 o 12 meses. Recibirá una carta de bienvenida, digital o para imprimir, con tu mensaje.</p>
+        <div role="group" aria-label="Duración del regalo" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px">
+          <sc-for list="{{months}}" as="m" hint-placeholder-count="3">
+            <button type="button" aria-pressed="{{m.pressed}}" onClick="{{m.pick}}" style="{{m.style}};min-height:56px;min-width:120px;padding:0 24px;border-width:2px;border-style:solid;border-radius:999px;font-family:'Jost',sans-serif;font-weight:600;font-size:17px;letter-spacing:.08em;cursor:pointer">{{m.label}}</button>
+          </sc-for>
+        </div>
+        <p style="margin-top:20px;font-size:19px;color:#1E2747"><strong>{{giftTitle}}.</strong> {{giftText}}</p>
+        <div style="margin-top:28px"><a class="btn btn-p" href="#final">Regalar GRANDLY</a></div>
+      </div>
+      <div style="display:flex;justify-content:center">
+        <div style="width:100%;max-width:440px;background:#FFFDF7;border:1px solid #0F1F5C;transform:rotate(2deg);box-shadow:0 20px 40px rgba(15,31,92,.2)">
+          <div style="height:8px;background:repeating-linear-gradient(-45deg,#E5392B 0 10px,#FFFDF7 10px 20px,#1D3FAE 20px 30px,#FFFDF7 30px 40px)"></div>
+          <div style="padding:36px 34px">
+            <div style="font-family:'Jost',sans-serif;font-weight:600;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:#4A5272">Carta de bienvenida · Ejemplo</div>
+            <p class="serif" style="font-size:38px;line-height:1.12;color:#0F1F5C;margin-top:18px;font-style:italic">Para ti, con mucho cariño.</p>
+            <p style="margin-top:14px;font-size:19px;color:#2B3358">Durante {{giftMonths}} meses recibirás GRANDLY. Espero que lo disfrutes tanto como yo disfruto pensando en ti.</p>
+            <div style="margin-top:24px;display:flex;align-items:center;gap:12px">
+              <svg width="48" height="36" viewBox="0 0 48 36" aria-hidden="true"><path d="M0 36V14a7 7 0 0 1 14 0V36Z" fill="#1D3FAE"></path><path d="M17 36V14a7 7 0 0 1 14 0V36Z" fill="#E5392B"></path><path d="M34 36V14a7 7 0 0 1 14 0V36Z" fill="#F7C531"></path></svg>
+              <span style="font-family:'Jost',sans-serif;font-weight:700;font-size:15px;letter-spacing:.3em;color:#0F1F5C">GRANDLY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="background:#FBF8F1">
+    <div class="wrap">
+      <div style="max-width:720px">
+        <p class="eyebrow">Un club para todos</p>
+        <h2 class="h-l">Hecho para quien lo recibe y para quien lo regala.</h2>
+      </div>
+      <div class="g2" style="margin-top:56px;align-items:stretch;gap:28px">
+        <div class="card" style="padding:40px 36px">
+          <h3 class="h-m">Si eres abuelo o abuela</h3>
+          <ul style="margin-top:20px;display:flex;flex-direction:column">
+            <li style="padding:12px 0;border-top:1px solid #CFD6E8;font-size:20px">Descubre algo nuevo cada mes</li>
+            <li style="padding:12px 0;border-top:1px solid #CFD6E8;font-size:20px">Disfruta de tu tiempo</li>
+            <li style="padding:12px 0;border-top:1px solid #CFD6E8;font-size:20px">Comparte tus historias</li>
+            <li style="padding:12px 0;border-top:1px solid #CFD6E8;font-size:20px">Encuentra nuevas actividades</li>
+            <li style="padding:12px 0;border-top:1px solid #CFD6E8;font-size:20px">Forma parte de GRANDLY</li>
+          </ul>
+        </div>
+        <div class="card" style="padding:40px 36px">
+          <h3 class="h-m">Si eres de la familia</h3>
+          <ul style="margin-top:20px;display:flex;flex-direction:column">
+            <li style="padding:12px 0;border-top:1px solid #CFD6E8;font-size:20px">Regala experiencias que continúan</li>
+            <li style="padding:12px 0;border-top:1px solid #CFD6E8;font-size:20px">Comparte algo diferente con tus abuelos</li>
+            <li style="padding:12px 0;border-top:1px solid #CFD6E8;font-size:20px">Descubre historias familiares</li>
+            <li style="padding:12px 0;border-top:1px solid #CFD6E8;font-size:20px">Un club para disfrutar juntos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="background:#BBD3F5">
+    <div class="wrap g2">
+      <div>
+        <p class="eyebrow" style="color:#0F1F5C">Accesibilidad</p>
+        <h2 class="h-l">Pensada para leerse sin esfuerzo.</h2>
+        <p class="serif" style="margin-top:24px;font-size:32px;line-height:1.15;font-style:italic;color:#0F1F5C">La tecnología debe adaptarse a los usuarios, no al contrario.</p>
+      </div>
+      <ul style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px 28px">
+        <sc-for list="{{access}}" as="a" hint-placeholder-count="8">
+          <li class="chk" style="color:#1E2747"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;margin-top:4px"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="#0F1F5C" stroke-width="2.6"></path></svg>{{a.text}}</li>
+        </sc-for>
+      </ul>
+    </div>
+  </section>
+
+  <section id="preguntas" class="sec" style="background:#FBF8F1">
+    <div class="wrap" style="max-width:920px">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2 class="h-l">Lo que suele preguntarse.</h2>
+      <div style="margin-top:40px;border-top:2px solid #0F1F5C">
+        <sc-for list="{{faq}}" as="f" hint-placeholder-count="6">
+          <div style="border-bottom:1px solid #CFD6E8">
+            <button type="button" class="faq-b" aria-expanded="{{f.expanded}}" onClick="{{f.toggle}}">
+              <span>{{f.q}}</span>
+              <span style="font-family:'Jost',sans-serif;font-size:30px;color:#1D3FAE;flex:none;width:32px;text-align:center">{{f.sign}}</span>
+            </button>
+            <sc-if value="{{f.isOpen}}" hint-placeholder-val="{{ false }}">
+              <p style="padding:0 52px 24px 0;font-size:19px;color:#2B3358;max-width:760px">{{f.a}}</p>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="final" style="background:#0F1F5C;color:#FBF8F1;padding:104px 0;text-align:center;position:relative">
+    <div style="position:absolute;top:0;left:0;right:0;height:8px;background:repeating-linear-gradient(-45deg,#E5392B 0 14px,#0F1F5C 14px 28px,#BBD3F5 28px 42px,#0F1F5C 42px 56px)"></div>
+    <div class="wrap" style="max-width:860px">
+      <svg width="72" height="54" viewBox="0 0 48 36" aria-hidden="true"><path d="M0 36V14a7 7 0 0 1 14 0V36Z" fill="#BBD3F5"></path><path d="M17 36V14a7 7 0 0 1 14 0V36Z" fill="#F4B9C2"></path><path d="M34 36V14a7 7 0 0 1 14 0V36Z" fill="#F7C531"></path></svg>
+      <h2 class="h-l" style="color:#FBF8F1;margin-top:24px">Que cada mes llegue algo bonito.</h2>
+      <p class="lead" style="color:#DCE3F5;margin-top:20px">Únete al club o regala GRANDLY a alguien que te importa. Las generaciones nos unen.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:36px">
+        <a class="btn btn-y" href="#suscripciones">Quiero suscribirme</a>
+        <a class="btn" href="#regalar" style="border-color:#FBF8F1;color:#FBF8F1">Quiero regalarla</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#0A1640;color:#C9D3F0;padding:56px 0 40px">
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:flex-start">
+        <div>
+          <div style="display:flex;align-items:center;gap:14px">
+            <svg width="48" height="36" viewBox="0 0 48 36" aria-hidden="true"><path d="M0 36V14a7 7 0 0 1 14 0V36Z" fill="#BBD3F5"></path><path d="M17 36V14a7 7 0 0 1 14 0V36Z" fill="#F4B9C2"></path><path d="M34 36V14a7 7 0 0 1 14 0V36Z" fill="#F7C531"></path></svg>
+            <span style="font-family:'Jost',sans-serif;font-weight:700;font-size:22px;letter-spacing:.3em;color:#FBF8F1">GRANDLY</span>
+          </div>
+          <p class="serif" style="margin-top:14px;font-size:24px;font-style:italic;color:#FBF8F1">Las generaciones nos unen.</p>
+        </div>
+        <nav aria-label="Pie de página" style="display:flex;gap:28px;flex-wrap:wrap;font-size:17px">
+          <a href="#revista" style="color:#C9D3F0;padding:10px 0">La revista</a>
+          <a href="#suscripciones" style="color:#C9D3F0;padding:10px 0">Suscripciones</a>
+          <a href="#regalar" style="color:#C9D3F0;padding:10px 0">Regalar</a>
+          <a href="#preguntas" style="color:#C9D3F0;padding:10px 0">Preguntas</a>
+        </nav>
+      </div>
+      <div style="margin-top:36px;padding-top:24px;border-top:1px solid rgba(201,211,240,.3);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:16px">
+        <span>© 2026 GRANDLY · España · Contacto: grandly@outlook.es</span>
+        <span style="display:flex;gap:22px;flex-wrap:wrap"><a href="#inicio" style="color:#C9D3F0">Aviso legal</a><a href="#inicio" style="color:#C9D3F0">Privacidad</a><a href="#inicio" style="color:#C9D3F0">Cookies</a></span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":7000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.state || {};
+    const gift = s.gift === undefined ? 6 : s.gift;
+    const open = s.open === undefined ? 0 : s.open;
+
+    const sections = [
+      { n: '01', title: 'Historias GRANDLY', text: 'Personas y trayectorias contadas con cercanía.' },
+      { n: '02', title: 'El mundo hoy', text: 'Lo que ocurre a nuestro alrededor, explicado con claridad.' },
+      { n: '03', title: 'Mentes activas', text: 'Pasatiempos, retos y juegos para ejercitar la cabeza.' },
+      { n: '04', title: 'Descubre', text: 'Lugares, oficios e ideas nuevas para curiosos.' },
+      { n: '05', title: 'La cocina de casa', text: 'Recetas y recuerdos que se comparten a la mesa.' },
+      { n: '06', title: 'Entre generaciones', text: 'Propuestas para hacer juntos abuelos y nietos.' },
+      { n: '07', title: 'Tu espacio', text: 'El rincón de los miembros del club.' },
+      { n: '08', title: 'El reto del mes', text: 'Un desafío para disfrutar durante todo el mes.' }
+    ];
+
+    const ideas = [
+      { n: '1', title: 'Enséñame tu mundo', text: 'Cada uno comparte con el otro algo que le apasiona.' },
+      { n: '2', title: 'Al revés también se aprende', text: 'Los mayores enseñan, y los jóvenes también.' },
+      { n: '3', title: 'Historias que nos unen', text: 'Recuerdos de familia que merece la pena guardar.' },
+      { n: '4', title: 'Dos generaciones, un reto', text: 'Un desafío para resolver en equipo.' },
+      { n: '5', title: 'Pregúntale a tu abuelo', text: 'Preguntas para conocerse un poco mejor.' }
+    ];
+
+    const access = [
+      { text: 'Texto ajustable' },
+      { text: 'Botones grandes' },
+      { text: 'Contraste suficiente' },
+      { text: 'Navegación sencilla' },
+      { text: 'Pocas opciones por pantalla' },
+      { text: 'Lectura en voz alta cuando sea posible' },
+      { text: 'Instrucciones claras' },
+      { text: 'Ayuda para familiares' }
+    ];
+
+    const months = [3, 6, 12].map((m) => ({
+      label: m + ' meses',
+      pressed: m === gift ? 'true' : 'false',
+      style: m === gift
+        ? 'background:#0F1F5C;color:#FBF8F1;border-color:#0F1F5C'
+        : 'background:#FFFDF7;color:#0F1F5C;border-color:#0F1F5C',
+      pick: () => this.setState({ gift: m })
+    }));
+
+    const faqData = [
+      { q: '¿Necesito instalar una aplicación?', a: 'No. De momento todo funciona desde la web, sin instalar nada. La experiencia digital está pensada para que cualquiera pueda usarla desde el móvil, la tableta o el ordenador.' },
+      { q: '¿Qué diferencia hay entre las tres modalidades?', a: 'Digital incluye la revista digital y la experiencia digital del club. Físico incluye la revista impresa y el acceso digital. Completo reúne la revista física y digital y todas las actividades del club.' },
+      { q: '¿Cómo funciona regalar GRANDLY?', a: 'Eliges una duración de 3, 6 o 12 meses y la persona que lo recibe disfruta de GRANDLY todo ese tiempo. Además recibe una carta de bienvenida, digital o para imprimir, con tu mensaje.' },
+      { q: '¿Pueden participar los nietos?', a: 'Sí, siempre de forma voluntaria y con propuestas pensadas para compartir. Cuando se trate de menores de 14 años, harán falta el consentimiento y la participación de sus padres o tutores.' },
+      { q: '¿Y si necesito ayuda con la parte digital?', a: 'La experiencia digital tiene instrucciones claras y pocas opciones por pantalla, y está pensada también para que un familiar pueda ayudar.' },
+      { q: '¿Dónde está disponible?', a: 'De momento, en España y en español. Empezamos así para cuidar bien cada envío y cada detalle.' }
+    ];
+
+    const faq = faqData.map((f, i) => ({
+      q: f.q,
+      a: f.a,
+      isOpen: i === open,
+      expanded: i === open ? 'true' : 'false',
+      sign: i === open ? '−' : '+',
+      toggle: () => this.setState({ open: i === open ? -1 : i })
+    }));
+
+    return {
+      sections,
+      ideas,
+      access,
+      months,
+      faq,
+      giftMonths: gift,
+      giftTitle: gift + ' meses de GRANDLY',
+      giftText: 'Tu regalo se disfruta durante ' + gift + ' meses, con una carta de bienvenida digital o para imprimir.'
+    };
+  }
+}
+</script>
+</body>
+</html>
